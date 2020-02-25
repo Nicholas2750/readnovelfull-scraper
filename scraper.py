@@ -1,5 +1,5 @@
-from selenium.webdriver import Chrome
-import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 import sys
 import os
 
@@ -8,8 +8,7 @@ url         = input('Enter URL of first chapter     : ')
 output_name = input('Enter name of scraping result  : ')
 content     = ''
 
-webdriver   = 'drivers/linux-chrome-driver'
-browser     = Chrome(webdriver)
+browser     = webdriver.Chrome()
 browser.get(url)
 
 
